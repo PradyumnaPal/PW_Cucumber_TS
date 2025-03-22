@@ -9,7 +9,7 @@
       "dryRun": false,
       "require": [
         "src/test/steps/*.ts",
-        "src/hooks/hooks.ts"
+        "src/utils/hooks.ts"
       ],
       "requireModule": [
         "ts-node/register"
