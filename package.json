@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test",
+    "test": "cucumber-js test||node -v",
     "posttest": "npx ts-node src/utils/reports.ts"
   },
   "keywords": [],

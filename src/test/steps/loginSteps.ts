@@ -23,7 +23,7 @@ Then('I verify the login status message as {string}', async function (msg) {
   if (msg == "Dashboard") {
     await expect(pageFixture.page.locator("//span[text()='Dashboard']")).toBeVisible();
   } else if (msg == "Invalid credentials") {
-    await expect(pageFixture.page.locator("//*[text()='Invalid credentials']")).toBeVisible();
+    await expect(pageFixture.page.locator("//*[text()='Invalid credentials1']")).toBeVisible();
   }
   await pageFixture.page.waitForTimeout(2000);
 
