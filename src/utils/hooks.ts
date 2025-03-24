@@ -2,18 +2,17 @@
 import { chromium, Browser, BrowserContext, Page, expect } from '@playwright/test';
 import { Given, When, Then, setDefaultTimeout, BeforeStep, AfterStep, Before, After, BeforeAll, AfterAll, Status } from '@cucumber/cucumber';
 import { pageFixture } from './pageFixture';
+import {invokeBrowser} from '../helper/browsers/browserManager';
+import { getEnv } from '../helper/env/env';
 
 let browser: Browser;
 let context: BrowserContext;
 
 Before(async function () {
-  browser = await chromium.launch({ headless: false });
+  getEnv();
+  browser = await invokeBrowser();
   context = await browser.newContext();
   pageFixture.page = await context.newPage();
-})
-
-After(async function () {
-  
 })
 
 After(async function ({ pickle, result }) {
