@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env ENV=staging cucumber-js test||node -v",
+    "test": "cross-env ENV=staging cucumber-js --config=config/cucumber.js||node -v",
     "pretest": "npx ts-node src/helper/report/init.ts",
     "posttest": "npx ts-node src/helper/report/reports.ts",
     "test:failed": "cucumber-js -p rerun @rerun.txt"

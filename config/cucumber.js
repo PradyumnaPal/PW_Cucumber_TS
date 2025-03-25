@@ -1,46 +1,46 @@
-{
-    "default": {
-      "tags": "@smoke",
-      "paths": [
+module.exports={
+    default: {
+      tags: process.env.npm_config_TAGS||"",
+      paths: [
         "src/test/features/"
       ],
-      "formatOptions": {
-        "snippetInterface": "async-await"
+      formatOptions: {
+        snippetInterface: "async-await"
       },
-      "dryRun": false,
-      "require": [
+      dryRun: false,
+      require: [
         "src/test/steps/*.ts",
         "src/utils/hooks.ts"
       ],
-      "requireModule": [
+      requireModule: [
         "ts-node/register"
       ],
-      "format": [
+      format: [
         "progress-bar",
         "html:test-results/cucumber-report.html",
         "json:test-results/cucumber-report.json",
         "rerun:@rerun.txt"
       ],
-      "parallel": 2
+      parallel: 2
     },
     "rerun": {
-      "formatOptions": {
-        "snippetInterface": "async-await"
+      formatOptions: {
+        snippetInterface: "async-await"
       },
-      "dryRun": false,
-      "require": [
+      dryRun: false,
+      require: [
         "src/test/steps/*.ts",
         "src/utils/hooks.ts"
       ],
-      "requireModule": [
+      requireModule: [
         "ts-node/register"
       ],
-      "format": [
+      format: [
         "progress-bar",
         "html:test-results/cucumber-report.html",
         "json:test-results/cucumber-report.json",
         "rerun:@rerun.txt"
       ],
-      "parallel": 2
+      parallel: 2
     }
   }
