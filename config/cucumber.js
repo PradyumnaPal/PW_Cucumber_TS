@@ -10,7 +10,7 @@ module.exports={
       dryRun: false,
       require: [
         "src/test/steps/*.ts",
-        "src/utils/hooks.ts"
+        "src/helper/utils/hooks.ts"
       ],
       requireModule: [
         "ts-node/register"
@@ -30,7 +30,7 @@ module.exports={
       dryRun: false,
       require: [
         "src/test/steps/*.ts",
-        "src/utils/hooks.ts"
+        "src/helper/utils/hooks.ts"
       ],
       requireModule: [
         "ts-node/register"
