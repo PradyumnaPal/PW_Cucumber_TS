@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
-import { pageFixture } from '../../utils/pageFixture';
+import { pageFixture } from '../../helper/utils/pageFixture';
 
 setDefaultTimeout(60 * 1000 * 2);
 
