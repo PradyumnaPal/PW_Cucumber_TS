@@ -1,5 +1,7 @@
 const report = require("multiple-cucumber-html-reporter");
 
+var date= new Date();
+var currentDate=date.getDate()+'_'+(date.getMonth()+1)+'_'+date.getFullYear()+'_'+date.getHours()+'_'+date.getMinutes()+'_'+date.getSeconds();
 report.generate({
     jsonDir: "test-results",
     reportPath: "test-results/reports/",
@@ -9,7 +11,7 @@ report.generate({
     metadata: {
         browser: {
             name: "chrome",
-            version: "112",
+            version: "129",
         },
         device: "Pradyumna - PC",
         platform: {
@@ -18,11 +20,13 @@ report.generate({
         },
     },
     customData: {
-        title: "Test Info",
+        title: "Run Info",
         data: [
             { label: "Project", value: "Orange HRMS Application" },
-            { label: "Release", value: "1.2.3" },
-            { label: "Cycle", value: "Smoke-1" }
+            { label: "Release", value: "Sprint 10" },
+            { label: "Cycle", value: "1" },
+            { label: "Execution Start Time", value: currentDate },
+            { label: "Execution End Time", value: currentDate }
         ],
     },
 });
